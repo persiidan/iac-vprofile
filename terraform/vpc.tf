@@ -11,7 +11,7 @@ module "vpc" {
   public_subnets  = ["172.20.4.0/24", "172.20.5.0/24", "172.20.6.0/24"]
 
   enable_nat_gateway   = true
-  single_nat_gateway   = true
+  single_nat_gateway   = true # one NAT gateway for the whole VPC (less cost, less availability) good for practice/dev environments
   enable_dns_hostnames = true
 
   public_subnet_tags = {
