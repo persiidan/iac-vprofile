@@ -10,8 +10,8 @@ module "eks" {
   endpoint_public_access = true
 
   eks_managed_node_groups = {
-    ami_type = "AL2023_x86_64_STANDARD"
     one = {
+      ami_type = "AL2023_x86_64_STANDARD"
       name = "node-group-1"
 
       instance_types = ["t3.micro"]
@@ -22,6 +22,7 @@ module "eks" {
     }
 
     two = {
+      ami_type = "AL2023_x86_64_STANDARD"
       name = "node-group-2"
 
       instance_types = ["t3.micro"]
