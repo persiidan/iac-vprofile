@@ -10,7 +10,7 @@ module "eks" {
   endpoint_public_access = true
 
   eks_managed_node_groups = {
-    ami_type = "AL2_x86_64"
+    ami_type = "AL2023_x86_64_STANDARD"
     one = {
       name = "node-group-1"
 
