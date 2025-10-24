@@ -9,6 +9,9 @@ module "eks" {
   subnet_ids             = module.vpc.private_subnets
   endpoint_public_access = true
 
+  enable_cluster_creator_admin_permissions = true
+
+
   eks_managed_node_groups = {
     one = {
       ami_type = "AL2023_x86_64_STANDARD"
